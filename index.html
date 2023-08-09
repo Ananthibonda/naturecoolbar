@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>PROJECT</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#navbar{
+    position: sticky;
+    top:0;
+    left:0;
+    z-index: 100;
+    padding:.5rem 5rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+    background: black;
+}
+.navbar .navbar-brand{
+    font-size: 25px;
+    font-weight: 800;
+    color:darkslategrey !important;
+}
+#navbarSupportedContent a{
+    color: #fff;
+    border-bottom: 2px solid transparent;
+}
+#navbarSupportedContent a:hover{
+
+    border-bottom: 2px solid darkslategrey;
+}
+#navbarSupportedContent button{
+    background:darkslategrey;
+    width:6rem;
+    border-radius: 15px;
+}
+#home{
+  background-image: url("./four-different-cocktail-smoothies-with-milky-cream-top.jpg");
+    background-size:cover;
+    background-position: center;
+    flex-direction: column;
+
+}
+
+#home h1{
+    font-size: 100px;
+    color: white;
+    letter-spacing: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 1px 0px #ccc,
+                 0px 2px 0px #ccc,
+                 0px 3px 0px #ccc,
+                 0px 4px 0px #ccc,
+                 0px 5px 0px #ccc,
+                 0px 6px 0px #ccc,
+                 0px 7px 0px #ccc;
+}
+#home p{
+  text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+#about{
+  background-color:gray;
+}
+#A{
+  border-radius: 10px;
+  transition: width 2s;
+  transition-timing-function:ease-in-out;
+  transition-delay: 2s;
+  transition-duration: 10s;
+}
+p :hover{
+  width:500px
+} 
+h1{
+   text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+h2{
+  text-align: center;
+  background-position: center;
+}    
+#juice{
+  background-color: gray;
+  background-position: center;
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#cakebox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+.box{
+  position: relative;
+  width: 300px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation:animate 10s linear infinite;
+}
+@keyframes animate{
+  0%{
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100%{
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+.box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+
+}
+.box span img{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius:30%;
+  object-fit: cover;
+}
+#Product{
+    background: #e5e5e5 !important;
+}
+#Product h1{
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+#Product img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.card{
+    width: 250px;
+    height: 300px;
+    background: #e5e5e5 !important;
+    
+    box-shadow: 15px 20px 20px rgba(0,0,0,.3),
+                inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin:20px 60px;
+    transition: .2s;
+    border-color: #000;
+}
+.card:hover{
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,.3),
+                inset -4px -4px 10px white;
+    transition: .2s;
+    color:black;
+}
+#offer{
+color: #000;
+background-color:honeydew;
+}
+.model{
+  position: absolute;
+}
+.human{
+  position: relative;
+  bottom: 250px;
+   margin-left: 600px;
+  font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 350;
+    color:darkgoldenrod;
+}
+.contact{
+  position: absolute;
+  margin-top: 100px;
+}
+.fooot{
+  position: relative;
+
+}
+.Signin{
+    background: green !important;
+    color: white !important;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.5);
+}
+.marq{
+  margin-top: 300px;
+}
+.M{
+  border: 4px solid;
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  position: center;
+  font-size: x-large;
+}
+.i{
+  margin-top: 120px;
+}
+
+
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2 ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./refreshing-summer-cocktail-wooden-table-generative-ai.jpg"style="height: 50px; width: 50px;border-radius:20px "></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 20px; font-weight: 600;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#about">ABOUT US</a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#variety">VARIETIES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#offer">OFFERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#contacts">CONTACT</a>
+            </li>
+            <li class="list-inline-item mt-2">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fas fa-cart-shopping"></i></a>
+            </li>
+        </ul>
+        <form class="d-flex">
+ 
+          <button class="btn btn-outline-white bg-white me-2" type="submit">Search</button>
+        </form>
+        <button class="btn bg-white  ms-2" type="submit" style="font-weight: 600;"><a href="#" style="text-decoration: none; color: black;">Sig in</a></button>
+        
+      </div>
+    </div>
+  </nav>
+  <section id="home">
+    <h1 text="center">NATURE  COOL  BAR</h1>
+                  <p>Variety's the very spice of life,That gives it all its flavour
+    </p>
+    <div class="container">
+      <div id="caro" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-indicators">
+           <button type="button" data-bs-target="#caro" data-bs-slide-to="0" class="active"></button>
+           <button type="button" data-bs-target="#caro" data-bs-slide-to="1" class="active"></button>
+           <button type="button" data-bs-target="#caro" data-bs-slide-to="2" class="active"></button>
+         </div>
+          <div class="carousel-inner">
+              <div class=" carousel-item active">
+                <div id="a">
+                  <img src="./fresh-gourmet-dessert-splashing-sweet-chocolate-liquid-generative-ai.jpg" class="d-block" style="width: 100%;height: 100%;">
+                </div>
+                </div>
+              <div class=" carousel-item">
+                <div id="b">
+                  <img src="./cake8.jpg"class="d-block" style="width: 100%;height: 100%;">
+                </div>
+                </div>
+              <div class="carousel-item">
+                <div id="c">
+                  <img src="./image3.webp" class="d-block" style="width: 100%;height: 100%;">
+                </div>
+                </div>
+          </div>
+          <button class="carousel-control-prev"type="button" data-bs-target="#caro"data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark"></span>
+        </button>
+        <button class="carousel-control-next"type="button" data-bs-target="#caro"data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark"></span>
+        </button>
+      </div>
+  </div>
+  </section>
+  <section id="about">
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-lg-6 col-md-6 col-12">
+              <br>
+              <div class="i">
+                <img src="./image1.jpg" class="img-fluid">
+              </div>
+                <br>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2 ">
+                <h1>ABOUT US</h1>
+                <p>
+                    Organic Plant Protein powder is a delicious version of protein uniquely formulated to have better taste and texture. It is ideal for anyone looking for a clean green protein supplement that is free of common allergens such as gluten, grains, dairy and soy.
+                    Organic Plant Protein is an extremely digestible, grain-free, gluten-free, delicious, very smooth, clean and creamy—with no gritty texture—innovative plant protein that delivers high-quality organic protein which sometimes comes with with a complete profile of essential amino acids and naturally occurring branched-chain amino acids (BCAAs).                  
+                    Health benefits of protein powder
+                    Protein is one of the building blocks of our body, especially of bones, muscles and skin. The body needs it to produce hormones, enzymes, and other chemicals.                        
+                    There are many whey protein powders out there that act as meal replacement options to keep you full while still losing weight, but plant-based protein powder naturally keeps you feeling full while also keeping you lean and healthier. It is a more natural option.
+                    Some plant proteins are complete meals themselves, like soy and quinoa, but others like pea are not. However, you can combine two or more plant proteins to create a complete protein with essential amino acids. In fact, that’s what we did when we created Plix Organic Blends Plant-Based formula.                        
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<section id="variety">
+  <h1>VARIETIES</h1>
+<h1>ICECREAM CAKES</h1>
+<br>
+<div id="cakebox">
+ <div class="box">
+  <span style="--i:1;"><img src="./ice1.jpg"> </span>
+  <span style="--i:2;"><img src="./ice2.jpg"> </span>
+  <span style="--i:3;"><img src="./ice3.jpg"> </span>
+  <span style="--i:4;"><img src="./ice4.jpg"> </span>
+  <span style="--i:5;"><img src="./ice5.jpg"> </span>
+  <span style="--i:6;"><img src="./ice6.jpg"> </span>
+  <span style="--i:7;"><img src="./ice7.jpg"> </span>
+  <span style="--i:8;"><img src="./ice8.jpg"> </span>
+ </div>
+</div>
+<br>
+<div class="container">
+  <h1>Diease-Free Life Is The Perfect Wealth</h1>
+  <div id="ANANTHI">
+    <div class="row">
+      <div class="card">
+          <div class="card-header">
+            <a class="btn btn-success" data-bs-toggle="collapse" href="#collapseone">DRINK WELL</a>
+          </div>
+          <div id="collapseone" class="collapse " data-bs-parent="#ANANTHI">
+              <div class="card-body">
+                  <img src="./juice.webp" width="300px" height="350px">
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-header">
+              <a class="collapsed btn btn-dark text-white" data-bs-toggle="collapse" href="#collapsetwo">ONCE SEE AFTER DRINK</a>
+          </div>
+          <div id="collapsetwo"class="collapse" data-bs-parent="#ANANTHI">
+              <div class="card-body">
+                <h3>
+                  <pre>
+        NATURE IS OUR LIFE;
+        HEALTHY DRINK GAINS POW;
+        DRINK DAY BY DAY;
+        STAY LIVE LONG;
+        HAPPY&#128525 SMILE;
+        INCEREASE IMUNNITY POW;
+        FIGHT TO DISEASES&#128525;
+        &#128525&#128526 
+        FEEL GOOD&#128578
+        BE GOOD&#127817
+        &#127819 
+        &#127819</h3>
+                  </pre>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-header">
+              <a class="collapsed btn btn-info text-white" data-bs-toggle="collapse" href="#collapsethree">PREPARATIONS</a>
+          </div>
+          <div id="collapsethree"class="collapse" data-bs-parent="#ANANTHI">
+              <div class="card-body">
+                  <video controls autoplay muted>
+                      <source src="./VIDEO JU.mp4"  type="video/mp4" width="200px" height="300px">
+                  </video>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+</div>
+<header id="Product">
+  <div class="container m-5">
+      <h1 class="text-center my-5">OUR DESSERTS</h1>
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                  <img src="./ice6.jpg" class="card-img-top">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">COLD COFFEE</h5>
+                    <a href="#" class="btn Signin">RS/-50</a>
+                  </div>
+                </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                  <img src="./milk2.jpg" class="card-img-top">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">FRUIT JUICE</h5>
+                    <a href="#" class="btn Signin">RS/-30</a>
+                  </div>
+                </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                  <img src="./ice7.jpg" class="card-img-top">
+                  <div class="card-body text-center"> 
+                    <h5 class="card-title">CUP ICECREAM</h5>
+                    <a href="#" class="btn Signin">RS/-100</a>
+                  </div>
+                </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                  <img src="./cake6.jpg" class="card-img-top">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">BATHAM ICECAKE</h5>
+                    <a href="#" class="btn Signin">RS/-300</a>
+                  </div>
+                </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                  <img src="./refreshing-summer-cocktail-wooden-table-generative-ai.jpg" class="card-img-top">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">CHOCLATE MIX SHAKE</h5>
+                    <a href="#" class="btn Signin">RS/-150</a>
+                  </div>
+                </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                  <img src="./two-milk-shakes-table.jpg" class="card-img-top">
+                  <div class="card-body text-center"> 
+                    <h5 class="card-title">MILKSHAKES</h5>
+                    <a href="#" class="btn Signin">RS/-80</a>
+                  </div>
+                </div>
+          </div>
+    
+      </div>
+  </div>
+</header>
+</section>
+<br>
+<section id="offer">
+     <h1>OFFERS%</h1>
+  <div class="model">
+    <img src="./marq3.jpg" width="500px" height="300px">
+    <pre class="human">
+      EVERY WEEK (MONDAY)&#128578
+         BIRTHDAY CAKE OFFER 20% DISCOUNT
+      EVERY SUNDAY&#128526
+Daily  FIRST 20 DISABLED HUMAN Cusmoters
+Free 1 jUICE && 1 piece Cake&#128525
+
+     </pre>
+  </div>
+</section>
+<br>
+<section class="marq">
+  <h1>COME AND VISIT</h1>
+ <div id="m">
+  <br>
+  <br>
+  <marquee>
+    <img src="./marq2.jpg" width="300px"height="400px">
+  </marquee>
+  <marquee direction="right">
+    <img src="./marq4.jpg" width="300px"height="400px">
+  </marquee>
+  
+  <marquee class="M">
+    &#128525DRINK WELL&#128526
+    Juicing is an easy way to jumpstart a healthier you!
+Enjoy the fresh fruit juice together with your friends.
+One glass of juice a day keeps the doctor away.
+Life is a constant second chance. ...
+  </marquee>
+</div>
+</section>
+<br>
+<br>
+<section id="contacts">
+  <div class="fooot">
+    <h1>CONTACT</h1>
+    <br>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <footer class="bg-black text-white pt-5 pb-4">
+    <div class="container text-center text-md-left">
+      <div class="row text-center text-md-left">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <div id="fut">
+   <a href="#" ><img src="./marq5.jpg" width="400px" height="200px"></a>
+          </div>
+        </div>
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto col-md-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Shop</h5>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">cool drinks</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">varieties</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">offers</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Weekly deals</a>
+        </p>
+      
+    
+      </div>
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Need help?</h5>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Contact</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Order tracking</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">FQAs</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Privacy policy</a>
+        </p>
+      </div>
+      <div class="col-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+        <p>
+          <i class="fas fa-home mr-3"></i>Tamilnadu-TIRUVANNAMALAI-606708
+        </p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i>ananthi22@gmail.com
+        </p>
+        <p>
+          <i class="fas fa-phone mr-3"></i>9573330393
+        </p>
+        <p>
+          <i class="fas fa-print mr-3"></i>00 733 309 37
+        </p>
+      </div>
+      <hr class="mb-4">
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-7">
+          <p>Copyright 2023 All right reserved by:
+            <a href="#" style="text-decoration: none;">
+              <strong class="text-warning">The Provider</strong>
+            </a>
+          </p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+            </li>
+    
+          </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+ </footer>
+</div>
+</section>
+</body>
+</html>
